@@ -42,17 +42,17 @@ echo نسخه Node.js:
 node --version
 echo.
 
-if not exist "node_modules\socket.io" (
-    echo در حال آماده‌سازي سرور (فقط بار اول)...
+node -e "require.resolve('socket.io'); require.resolve('pg')" >nul 2>nul
+if errorlevel 1 (
+    echo در حال آماده‌سازی سرور (فقط بار اول)...
     call npm install --no-audit --no-fund
     if errorlevel 1 (
         echo.
-        echo نصب کتابخانه‌ها ناموفق بود. اتصال اينترنت را بررسي کن.
+        echo نصب کتابخانه‌ها ناموفق بود. اتصال اینترنت را بررسی کن.
         pause
         exit /b 1
     )
 )
-
 echo.
 echo آدرس اين کامپيوتر براي دستگاه‌هاي همين Wi-Fi:
 powershell -NoProfile -Command "Get-NetIPAddress -AddressFamily IPv4 -ErrorAction SilentlyContinue | Where-Object { $_.IPAddress -notlike '127.*' -and $_.IPAddress -notlike '169.254.*' } | ForEach-Object { Write-Host ('  http://' + $_.IPAddress + ':3000') }"

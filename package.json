@@ -1,8 +1,8 @@
 {
   "name": "hotel-96-online",
-  "version": "1.0.0",
+  "version": "2.1.0",
   "private": true,
-  "description": "بازی دوبعدی آنلاین هتل ۹۶ نفره",
+  "description": "HOTEL 96 - بازی دوبعدی آنلاین با زامبی‌های زیرزمین و مینی‌گیم‌های دونفره",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -12,6 +12,7 @@
     "node": ">=18"
   },
   "dependencies": {
+    "pg": "^8.13.1",
     "socket.io": "^4.8.1"
   }
 }

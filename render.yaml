@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: hotel-96
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start

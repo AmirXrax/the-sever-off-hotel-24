@@ -1,0 +1,2 @@
+HOTEL 96 — Version 2.1
+Features: V2 two-way elevator, fixed random shops, 24-hour reservations, PostgreSQL persistence; basement zombies and escape lift; online same-floor house invitations; 7 two-player timed mini-games.
